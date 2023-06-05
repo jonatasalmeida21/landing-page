@@ -1,89 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family= Inter:wght@600 & display = swap');
 * {
     padding: 0;
     margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    overflow: hidden;
 }
 
-header {
-    
-    background-color: rgb(255, 255, 255);
-    color:rgb(0, 0, 0);
-    height:5em ;
-    
-}
-img {
-    height: 60px;
-    margin: 10px;
-}
-.logo {
-    display: flex;    
-    align-items: center;
-    
-}
-.contato{
-    display: flex;
-    float: right;
-    align-items: center;
-    margin: 1em;
-    font-size: 20px;
-    color: rgb(67, 67, 124);
-
-    
-}
-.ri-whatsapp-fill{
-    border-radius: 100%;
-    padding: 0;
-    color:green;
-    margin: 5px;
-}
 section {
     display: flex;
-    background-image: url("1b209ec8-9578-4b7f-b94c-2c6360b32821.jpg");
+    background-image: url("./img/1b209ec8-9578-4b7f-b94c-2c6360b32821.jpg");
     background-repeat: no-repeat, repeat;
     background-position: center center;
+    height: 35rem;
+    box-shadow: 1px 1px 1px #3e3e3e9a;
     
 }
 
-.informacao{
-    display: flex;
-    text-align: center;
-    margin: 0,1em;
-
-    
-   
-}
-.cadastro {
+section .container{
     display: flex;
     flex-direction: column;
-    background-color: rgba(62, 62, 62, 0.37);
+    box-shadow: 2px 2px 2px #3e3e3e9a;
+    background-color: #3e3e3e9a;
     font-family: 'Roboto', sans-serif;
-    color:rgba(251, 251, 251, 0.77);
-
+    color:#fbfbfbd3;
+    border-radius: 10px;
     max-width: 400px;
     max-height: 500px;
     margin: 3em;
 }
-h2{
-    
-    display: flex;
-    text-align: center;
-    margin: 0,1em;
-}
-input,button{
-    border-radius: 10px;
-    width: 70%;
-    height: 70%;
-    margin-top: 30px;
-    padding: 8px;
-    align-items: center;
-    border-style: none;
-}
-button{
-    background-color: rgb(207, 93, 93);
-    color: white;
-    font-size: 15px;
-}
 
-.cad1 {
+section .cadastro{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -91,11 +39,87 @@ button{
     padding: 10px;
 }
 
+section .informacao{
+    display: flex;
+    text-align: center;
+    margin: 1em;  
+}
+section h2{
+    
+    display: flex;
+    text-align: center;
+    margin: 0,1em;
+}
+section input,button{
+    border-radius: 10px;
+    width: 70%;
+    height: 70%;
+    margin-top: 30px;
+    padding: 8px;
+    align-items: center;
+    border-style: none;
+    box-shadow: 2px 2px 2px #3e3e3ebb;
+}
+
+section input:hover{
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+
+section button{
+    background-color: rgb(207, 93, 93);
+    color: white;
+    font-size: 15px;
+    cursor:pointer;
+}
+
+section button:hover{
+    filter: brightness(120%);
+    transform: scale3d(1.05, 1.05, 1.05);
+}
+
+
+
 footer{
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px;
 }
+
+footer img:hover{
+    transform: scale3d(1.05, 1.05, 1.05);
+      
+}
+
+.wpp{
+    display: flex;
+    justify-content: flex-end;
+    float: right;
+    margin-right: 3em;
+    padding: 5px;
+
+    animation-name: pulse;
+    animation-timing-function: ease-in-out;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count:infinite;
+}
+
+@keyframes pulse {
+    0% {
+    transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    filter: brightness(none);
+    }
+    50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+    filter: brightness(110%);
+    }
+    100% {
+    transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+    filter: brightness(none);
+    }
+    }
